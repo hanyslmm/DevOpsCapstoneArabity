@@ -18,7 +18,9 @@ You would require to have an AWS account to be able to build cloud infrastructur
 * sudo systemctl start jenkins
 * sudo systemctl enable jenkins
 * Install Tidy on linux server. (https://stackoverflow.com/questions/33267133/is-php-tidy-still-available-in-centos-7)
-
+* Install Blue Ocean plugins and Amazon SDK
+* Add github token
+*
 ### Choose deployment strategy (Blue/Green deployment)
 
 Deployment strategy is an approach to roll out the updates/changes made in the "live" application. The idea is that the application must not be brought down to introduce the updates. There are a variety of strategies available. Let's assume that there are two versions of the software applications - version A and B. Version B is the updated version.
@@ -36,3 +38,4 @@ Make sure that you checkout branches "blue" and "green" to see how blue/green de
 ### Supporting Links
 
 https://pkg.jenkins.io/redhat/
+https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3-commands.html
