@@ -35,7 +35,9 @@ stage('Upload to AWS') {
      }
 }
 
-#### 4. 
+#### 4. Install Docker on Jenkins linux server
+
+* sudo yum install docker
 
 ### Choose deployment strategy (Blue/Green deployment)
 
