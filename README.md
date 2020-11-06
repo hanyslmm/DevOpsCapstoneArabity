@@ -43,7 +43,7 @@ stage('Upload to AWS') {
 * Install Docker on Jenkins linux server (sudo yum install docker)
 * sudo usermod -aG docker jenkins
 * In Jenkins, select Manage Jenkins, then select Configure System.
-* In Jenkins, select Manage Jenkins, then select Configure System.
+
 ### Choose deployment strategy (Blue/Green deployment)
 
 Deployment strategy is an approach to roll out the updates/changes made in the "live" application. The idea is that the application must not be brought down to introduce the updates. There are a variety of strategies available. Let's assume that there are two versions of the software applications - version A and B. Version B is the updated version.
