@@ -25,6 +25,7 @@ You would require to have an AWS account to be able to build cloud infrastructur
 * Create access key (Access ID & Access Key) on amazon S3 from user/security (https://console.aws.amazon.com/iam/home?region=us-west-2#/users/jenkinsUser?section=security_credentials)
 * Add the access key (Access ID & Access Key) to jenkins (http://jenkinsIpAddress:8080/credentials/store/system/domain/_/)
 * use the below stage in jenkinsfile:
+
 stage('Upload to AWS') {
      steps {
          withAWS(region:'us-west-2',credentials:'jenkinsUser') {
