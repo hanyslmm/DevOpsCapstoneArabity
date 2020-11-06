@@ -35,9 +35,10 @@ stage('Upload to AWS') {
      }
 }
 
-#### 4. Install Docker on Jenkins linux server
+#### 4. Install Aqua MicroScanner on Jenkins linux server
 
-* sudo yum install docker
+* Install Aqua MicroScanner plugin
+* Install Docker on Jenkins linux server (sudo yum install docker)
 
 ### Choose deployment strategy (Blue/Green deployment)
 
