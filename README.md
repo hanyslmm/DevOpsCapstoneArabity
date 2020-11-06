@@ -10,7 +10,7 @@ A flask web application that store info about car services provider in Egypt (Ar
 You would require to have an AWS account to be able to build cloud infrastructure. Particularly, you will need to create S3 buckets, EC2 instances, and IAM users.
 
 #### 2. Install Jenkins on Amazon Linux server
-** sudo yum update
+* sudo yum update
 * sudo yum install java
 * sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
 * sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
