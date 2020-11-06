@@ -1,6 +1,10 @@
 # Cloud DevOps Nanodegree Capstone project (Arabity)
 
 ## Step 1 (Propose and scope the project)
+## Step 2: Use Jenkins, and implement blue/green
+## Step 3: Pick AWS Kubernetes as a Service, or build your own Kubernetes cluster.
+## Step 4: Build your pipeline
+## Step 5: Test your pipeline
 
 ### About the Project
 A flask web application that store info about car services provider in Egypt (Arabity).
