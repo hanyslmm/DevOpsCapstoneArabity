@@ -38,8 +38,12 @@ stage('Upload to AWS') {
 #### 4. Install Aqua MicroScanner on Jenkins linux server
 
 * Install Aqua MicroScanner plugin
+* Create Aqua MicroScanner access token from https://microscanner.aquasec.com/
+* Docker must be installed on the same machine Jenkins is installed.
 * Install Docker on Jenkins linux server (sudo yum install docker)
-
+* sudo usermod -aG docker jenkins
+* In Jenkins, select Manage Jenkins, then select Configure System.
+* In Jenkins, select Manage Jenkins, then select Configure System.
 ### Choose deployment strategy (Blue/Green deployment)
 
 Deployment strategy is an approach to roll out the updates/changes made in the "live" application. The idea is that the application must not be brought down to introduce the updates. There are a variety of strategies available. Let's assume that there are two versions of the software applications - version A and B. Version B is the updated version.
@@ -57,4 +61,7 @@ Make sure that you checkout branches "blue" and "green" to see how blue/green de
 ### Supporting Links
 
 https://pkg.jenkins.io/redhat/
+
 https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3-commands.html
+
+https://github.com/jenkinsci/aqua-microscanner-plugin
