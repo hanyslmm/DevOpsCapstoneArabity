@@ -20,7 +20,22 @@ You would require to have an AWS account to be able to build cloud infrastructur
 * Install Tidy on linux server. (https://stackoverflow.com/questions/33267133/is-php-tidy-still-available-in-centos-7)
 * Install Blue Ocean plugins and Amazon SDK
 * Add github token
-*
+
+#### 3. Access S3 Bucket
+* Create access key (Access ID & Access Key) on amazon S3 from user/security (https://console.aws.amazon.com/iam/home?region=us-west-2#/users/jenkinsUser?section=security_credentials)
+* Add the access key (Access ID & Access Key) to jenkins (http://jenkinsIpAddress:8080/credentials/store/system/domain/_/)
+* use the below stage in jenkinsfile:
+stage('Upload to AWS') {
+     steps {
+         withAWS(region:'us-west-2',credentials:'jenkinsUser') {
+         sh 'echo "Uploading content with AWS creds"'
+             s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'hany-jenk-bucket')
+         }
+     }
+}
+
+#### 4. 
+
 ### Choose deployment strategy (Blue/Green deployment)
 
 Deployment strategy is an approach to roll out the updates/changes made in the "live" application. The idea is that the application must not be brought down to introduce the updates. There are a variety of strategies available. Let's assume that there are two versions of the software applications - version A and B. Version B is the updated version.
