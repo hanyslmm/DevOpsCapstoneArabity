@@ -64,9 +64,12 @@ stage('Upload to AWS') {
      aquaMicroscanner imageName: 'hanyslmm/flasksklearn-hon', notCompliesCmd: 'exit 1', onDisallowed: 'success or fail', outputFormat: 'html'
   }
 
+#### 7. Create Docker App:
 
-#### 5. Create High Availability Web App Using AWS CloudFormation:
-##### A. Develop a diagram that is a visual aid to understand the CloudFormation script.
+#### 6. Create High Availability Web App Using AWS CloudFormation:
+##### A. Develop Infrastructure Diagram
+##### B.
+
 
 ### Supporting Links
 
@@ -77,3 +80,5 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3-commands.html
 https://github.com/jenkinsci/aqua-microscanner-plugin
 
 https://docs.ansible.com/ansible/latest/index.html
+
+https://www.lucidchart.com/pages/
