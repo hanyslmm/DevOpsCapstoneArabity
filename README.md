@@ -9,7 +9,20 @@
 ### About the Project
 A flask web application that store info about car services provider in Egypt (Arabity).
 
-### Dependencies
+#### Choose deployment strategy (Blue/Green deployment)
+
+Deployment strategy is an approach to roll out the updates/changes made in the "live" application. The idea is that the application must not be brought down to introduce the updates. There are a variety of strategies available. Let's assume that there are two versions of the software applications - version A and B. Version B is the updated version.
+
+1. Rolling - Version B is gradually rolled out succeeding version A. This is suitable when the updates are very small, such as bug fixes.
+2. Blue/Green - Version B is released alongside version A, then the traffic is switched to version B. This is the preferred model when there are major updates or releasing new features.
+3. Canary - Version B is released to a specific subset of users for early feedback and testing, then proceed to a complete rollout.
+4. A/B testing - Version B is released to a subset of users under particular conditions.
+5. Recreate - Version A is terminated first, and then the version B is rolled out.
+6. Shadow - Version B receives real-world traffic alongside version A and doesn’t impact the response.
+
+Make sure that you checkout branches "blue" and "green" to see how blue/green deployment was performed.
+
+### Dependencies and Work details
 #### 1. AWS account
 You would require to have an AWS account to be able to build cloud infrastructure. Particularly, you will need to create S3 buckets, EC2 instances, and IAM users.
 
@@ -50,19 +63,10 @@ stage('Upload to AWS') {
 *   steps {
      aquaMicroscanner imageName: 'hanyslmm/flasksklearn-hon', notCompliesCmd: 'exit 1', onDisallowed: 'success or fail', outputFormat: 'html'
   }
-### Choose deployment strategy (Blue/Green deployment)
 
-Deployment strategy is an approach to roll out the updates/changes made in the "live" application. The idea is that the application must not be brought down to introduce the updates. There are a variety of strategies available. Let's assume that there are two versions of the software applications - version A and B. Version B is the updated version.
 
-1. Rolling - Version B is gradually rolled out succeeding version A. This is suitable when the updates are very small, such as bug fixes.
-2. Blue/Green - Version B is released alongside version A, then the traffic is switched to version B. This is the preferred model when there are major updates or releasing new features.
-3. Canary - Version B is released to a specific subset of users for early feedback and testing, then proceed to a complete rollout.
-4. A/B testing - Version B is released to a subset of users under particular conditions.
-5. Recreate - Version A is terminated first, and then the version B is rolled out.
-6. Shadow - Version B receives real-world traffic alongside version A and doesn’t impact the response.
-
-Make sure that you checkout branches "blue" and "green" to see how blue/green deployment was performed.
-
+#### 5. Create High Availability Web App Using AWS CloudFormation:
+##### A. Develop a diagram that is a visual aid to understand the CloudFormation script.
 
 ### Supporting Links
 
