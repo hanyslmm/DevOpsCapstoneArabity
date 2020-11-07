@@ -71,3 +71,5 @@ https://pkg.jenkins.io/redhat/
 https://docs.aws.amazon.com/cli/latest/userguide/cli-services-s3-commands.html
 
 https://github.com/jenkinsci/aqua-microscanner-plugin
+
+https://docs.ansible.com/ansible/latest/index.html
