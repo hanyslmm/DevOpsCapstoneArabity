@@ -82,3 +82,7 @@ https://github.com/jenkinsci/aqua-microscanner-plugin
 https://docs.ansible.com/ansible/latest/index.html
 
 https://www.lucidchart.com/pages/
+
+https://stackoverflow.com/questions/8724939/how-to-move-jenkins-from-one-pc-to-another
+
+https://linuxconfig.org/how-to-install-docker-in-rhel-8
