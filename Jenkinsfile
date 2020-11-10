@@ -18,7 +18,14 @@ pipeline {
          }
          stage('Lint Docker file') {
               steps {
-                  sh 'pricePredictionMLApp/make lint'
+              sh '''
+                  cd pricePredictionMLApp
+                  sh 'make lint'
+                  pwd
+                  cd ..
+                  pwd
+              '''
+
               }
          }
          stage('Security Scan') {
