@@ -31,7 +31,7 @@ jobs:
           command: |
             python3 -m venv ~/.devops
             source ~/.devops/bin/activate
-            make install
+            make pricePredictionMLApp/install
             wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.17.5/hadolint-Linux-x86_64 &&\
                 chmod +x /bin/hadolint
       - save_cache:
@@ -44,10 +44,10 @@ jobs:
           name: run tests
           command: |
             source ~/.devops/bin/activate
-            make test
+            pricePredictionMLApp/make test
       # run lints!
       - run:
           name: run lint
           command: |
             source ~/.devops/bin/activate
-            make lint
+            pricePredictionMLApp/make lint
