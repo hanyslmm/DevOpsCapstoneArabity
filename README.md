@@ -74,8 +74,15 @@ stage('Upload to AWS') {
 
 #### 6. Install Hadolint:
 * wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
-* sudo chmod 777 usr/bin/hadolint 
-#### 7. Create Docker App:
+* sudo chmod 777 usr/bin/hadolint
+#### 7. Create Docker ML App:
+a Machine Learning Microservice API. We are given a pre-trained, sklearn model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on.
+  1. Test project code using linting
+  1. Complete a Dockerfile to containerize this application
+  1. Deploy containerized application using Docker and make a prediction
+  1. Improve the log statements in the source code for this application
+  1. Configure Kubernetes and create a Kubernetes cluster
+  1. Deploy a container using Kubernetes and make a prediction
 
 #### 6. Create High Availability Web App Using AWS CloudFormation:
 ##### A. Develop Infrastructure Diagram
