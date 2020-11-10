@@ -75,6 +75,7 @@ stage('Upload to AWS') {
 #### 6. Install Hadolint:
 * wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
 * sudo chmod 777 usr/bin/hadolint
+
 #### 7. Create Docker ML App:
 a Machine Learning Microservice API. We are given a pre-trained, sklearn model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on.
   1. Test project code using linting
@@ -83,6 +84,14 @@ a Machine Learning Microservice API. We are given a pre-trained, sklearn model t
   1. Improve the log statements in the source code for this application
   1. Configure Kubernetes and create a Kubernetes cluster
   1. Deploy a container using Kubernetes and make a prediction
+
+#### 8. How to run application
+
+    * Run a Docker Container using the script ./run_docker.sh
+    * Upload the Docker Image using the script ./upload_docker.sh
+    * Deploy with Kubernetes using the script ./run_kubernetes.sh
+    * Make prediction either with Docker Container or Kubernetes Deployment using the script ./make_prediction.sh
+   how to run the Python scripts and web app
 
 #### 6. Create High Availability Web App Using AWS CloudFormation:
 ##### A. Develop Infrastructure Diagram
@@ -104,3 +113,18 @@ https://www.lucidchart.com/pages/
 https://stackoverflow.com/questions/8724939/how-to-move-jenkins-from-one-pc-to-another
 
 https://linuxconfig.org/how-to-install-docker-in-rhel-8
+
+#### List of Docker commands
+
+https://docs.docker.com/engine/reference/commandline/docker/
+
+#### Safely remove K8s Pods
+
+https://www.bluematador.com/blog/safely-removing-pods-from-a-kubernetes-node
+
+
+#### CricleCi blog
+
+https://circleci.com/blog/triggering-trusted-ci-jobs-on-untrusted-forks/
+
+https://circleci.com/docs/2.0/status-badges/
