@@ -93,7 +93,13 @@ a Machine Learning Microservice API. We are given a pre-trained, sklearn model t
     * Make prediction either with Docker Container or Kubernetes Deployment using the script ./make_prediction.sh
    how to run the Python scripts and web app
 
-#### 6. Create High Availability Web App Using AWS CloudFormation:
+#### 9. Install AWS cli and create Elastic Container registery
+
+* curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+* unzip awscliv2.zip
+* sudo ./aws/install
+
+Create High Availability Web App Using AWS CloudFormation:
 ##### A. Develop Infrastructure Diagram
 ##### B.
 
