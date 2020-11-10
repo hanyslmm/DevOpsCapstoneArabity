@@ -1,3 +1,6 @@
+
+[![CircleCI](https://circleci.com/gh/hanyslmm/DevOpsCapstoneArabity.svg?style=svg)](https://circleci.com/gh/hanyslmm/DevOpsCapstoneArabity)
+
 # Cloud DevOps Nanodegree Capstone project (Arabity)
 
 ## Step 1 (Propose and scope the project)
@@ -64,6 +67,10 @@ stage('Upload to AWS') {
      aquaMicroscanner imageName: 'hanyslmm/flasksklearn-hon', notCompliesCmd: 'exit 1', onDisallowed: 'success or fail', outputFormat: 'html'
   }
 
+#### 5. Install Circleci:
+* wget https://github.com/CircleCI-Public/circleci-cli/releases/download/v0.1.11458/circleci-cli_0.1.11458_linux_amd64.tar.gz
+* gunzip circleci-cli_0.1.11458_linux_amd64.tar.gz
+* cd circleci-cli_0.1.11458_linux_amd64/ | ./circleci | circleci update
 #### 7. Create Docker App:
 
 #### 6. Create High Availability Web App Using AWS CloudFormation:
