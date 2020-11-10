@@ -16,6 +16,11 @@ pipeline {
                   sh 'tidy -q -e index.html'
               }
          }
+         stage('Lint Docker file') {
+              steps {
+                  sh 'pricePredictionMLApp/make lint'
+              }
+         }
          stage('Security Scan') {
               steps {
                  aquaMicroscanner imageName: 'hanyslmm/flasksklearn-hon', notCompliesCmd: 'exit 1', onDisallowed: 'success', outputFormat: 'html'
