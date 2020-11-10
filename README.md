@@ -72,6 +72,9 @@ stage('Upload to AWS') {
 * gunzip circleci-cli_0.1.11458_linux_amd64.tar.gz
 * cd circleci-cli_0.1.11458_linux_amd64/ | ./circleci | circleci update | alias circleci='/home/ec2-user/circlePath/circleci'
 
+#### 6. Install Hadolint:
+* wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
+* sudo chmod 777 usr/bin/hadolint 
 #### 7. Create Docker App:
 
 #### 6. Create High Availability Web App Using AWS CloudFormation:
