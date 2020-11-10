@@ -20,7 +20,7 @@ pipeline {
               steps {
               sh '''
                   cd pricePredictionMLApp
-                  sh 'make lint'
+                  sh 'make lint-docker'
                   pwd
                   cd ..
                   pwd
