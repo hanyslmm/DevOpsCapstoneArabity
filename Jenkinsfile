@@ -27,11 +27,13 @@ pipeline {
               }
          }
          stage('Push Docker Image') {
-         withDockerRegistry([url: "", credentialsId: "hanyslmmDocker"]) {
+           steps {
+             withDockerRegistry([url: "", credentialsId: "hanyslmmDocker"]) {
              sh 'docker login'
              sh 'docker image tag flasksklearn-hon-capstone hanyslmm/flasksklearn-hon-capstone'
              sh 'docker push hanyslmm/flasksklearn-hon-capstone'
            }
+         }
          }
          stage('Security Scan') {
               steps {
