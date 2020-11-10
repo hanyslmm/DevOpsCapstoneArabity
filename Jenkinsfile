@@ -18,7 +18,7 @@ pipeline {
          }
          stage('Lint Docker file') {
               steps {
-              sh 'hadolint housingPricePredictionML/Dockerfile'
+              sh 'hadolint pricePredictionMLApp/Dockerfile'
               }
          }
          stage('Security Scan') {
