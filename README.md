@@ -70,7 +70,8 @@ stage('Upload to AWS') {
 #### 5. Install Circleci:
 * wget https://github.com/CircleCI-Public/circleci-cli/releases/download/v0.1.11458/circleci-cli_0.1.11458_linux_amd64.tar.gz
 * gunzip circleci-cli_0.1.11458_linux_amd64.tar.gz
-* cd circleci-cli_0.1.11458_linux_amd64/ | ./circleci | circleci update
+* cd circleci-cli_0.1.11458_linux_amd64/ | ./circleci | circleci update | alias circleci='/home/ec2-user/circlePath/circleci'
+
 #### 7. Create Docker App:
 
 #### 6. Create High Availability Web App Using AWS CloudFormation:
