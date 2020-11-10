@@ -19,12 +19,14 @@ pipeline {
          stage('Lint Docker file') {
               steps {
               sh '''
-              
+
                   cd pricePredictionMLApp
                   pwd
                   sh 'make lint-docker'
                   cd ..
                   pwd
+
+                  
               '''
 
               }
