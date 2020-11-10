@@ -21,6 +21,11 @@ pipeline {
               sh 'hadolint Dockerfile'
               }
          }
+         stage('Build Docker file') {
+              steps {
+              sh 'docker build --tag=flasksklearn-hon-capstone .'
+              }
+         }
          stage('Security Scan') {
               steps {
                  aquaMicroscanner imageName: 'hanyslmm/flasksklearn-hon', notCompliesCmd: 'exit 1', onDisallowed: 'success', outputFormat: 'html'
