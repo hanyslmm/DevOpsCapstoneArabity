@@ -22,11 +22,12 @@ pipeline {
 
                   cd pricePredictionMLApp
                   pwd
+                  ls -lah
                   sh 'make lint-docker'
                   cd ..
                   pwd
 
-                  
+
               '''
 
               }
