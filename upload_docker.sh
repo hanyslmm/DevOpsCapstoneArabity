@@ -5,12 +5,12 @@
 #docker build --tag=flasksklearn .
 
 
-dockerpath="hanyslmm/flasksklearn-hon"
+dockerpath="hanyslmm/flasksklearn-hon-capstone"
 
 # Authenticate & Tag
 echo "Docker ID and Image: $dockerpath"
 docker login &&\
-    docker image tag flasksklearn-hon $dockerpath
+    docker image tag flasksklearn-hon-capstone $dockerpath
 
 # Push Image
 docker image push $dockerpath

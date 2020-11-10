@@ -21,11 +21,6 @@ pipeline {
               sh 'hadolint Dockerfile'
               }
          }
-         stage('Lint Python file') {
-              steps {
-              sh 'pylint --disable=R,C,W1203 app.py'
-              }
-         }
          stage('Security Scan') {
               steps {
                  aquaMicroscanner imageName: 'hanyslmm/flasksklearn-hon', notCompliesCmd: 'exit 1', onDisallowed: 'success', outputFormat: 'html'

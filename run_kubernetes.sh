@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dockerpath="hanyslmm/flasksklearn-hon"
+dockerpath="hanyslmm/flasksklearn-hon-capstone"
 
 # Run in Docker Hub container with kubernetes
 kubectl run flask-hon\
