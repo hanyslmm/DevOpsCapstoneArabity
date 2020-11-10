@@ -26,6 +26,13 @@ pipeline {
               sh 'docker build --tag=flasksklearn-hon-capstone .'
               }
          }
+         stage('Push Docker Image') {
+            steps {
+             sh 'docker login'
+             sh 'docker image tag flasksklearn-hon-capstone hanyslmm/flasksklearn-hon-capstone'
+             sh 'docker push hanyslmm/flasksklearn-hon-capstone'
+           }
+         }
          stage('Security Scan') {
               steps {
                  aquaMicroscanner imageName: 'hanyslmm/flasksklearn-hon', notCompliesCmd: 'exit 1', onDisallowed: 'success', outputFormat: 'html'
