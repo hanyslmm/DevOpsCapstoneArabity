@@ -27,9 +27,9 @@ pipeline {
               }
          }
          stage('Push Docker Image') {
-         withDockerRegistry([url: "", credentialsId: "dockerhub"]) {
+         withDockerRegistry([url: "", credentialsId: "hanyslmm"]) {
              sh 'docker login'
-             sh 'docker image tag flasksklearn-hon-capstone hanyslmm/flasksklearn-hon-capstone'  
+             sh 'docker image tag flasksklearn-hon-capstone hanyslmm/flasksklearn-hon-capstone'
              sh 'docker push hanyslmm/flasksklearn-hon-capstone'
            }
          }
