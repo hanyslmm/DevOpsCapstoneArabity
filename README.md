@@ -1,6 +1,11 @@
 
 [![CircleCI](https://circleci.com/gh/hanyslmm/DevOpsCapstoneArabity.svg?style=svg)](https://circleci.com/gh/hanyslmm/DevOpsCapstoneArabity)
 
+#Project Github repo:
+
+https://github.com/hanyslmm/DevOpsCapstoneArabity
+
+
 # Cloud DevOps Nanodegree Capstone project (Arabity)
 
 ## Step 1 (Propose and scope the project)
