@@ -99,10 +99,6 @@ a Machine Learning Microservice API. We are given a pre-trained, sklearn model t
 * unzip awscliv2.zip
 * sudo ./aws/install
 
-Create High Availability Web App Using AWS CloudFormation:
-##### A. Develop Infrastructure Diagram
-##### B.
-
 
 ### Supporting Links
 
