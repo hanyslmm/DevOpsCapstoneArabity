@@ -35,6 +35,16 @@ pipeline {
            }
          }
          }
+         stage('Deploy Container') {
+              steps {
+                  withAWS(region:'us-west-2',credentials:'jenkinsUser') {
+                  sh 'hostname'
+                  sh 'which kubectl'
+                  sh 'kubectl config use-context arn:aws:eks:us-west-2:777933753083:cluster/flasksklearn-hon-capstone'
+                  sh 'kubectl apply -f deployment/deployment.yml'
+                  }
+              }
+         }
          stage('Security Scan') {
               steps {
                  aquaMicroscanner imageName: 'hanyslmm/flasksklearn-hon-capstone', notCompliesCmd: 'exit 1', onDisallowed: 'success', outputFormat: 'html'
@@ -49,6 +59,7 @@ pipeline {
                   }
               }
          }
+
 
 
      }
