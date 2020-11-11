@@ -47,7 +47,7 @@ pipeline {
                   sh 'aws eks update-kubeconfig --name flasksklearn-hon-capstone'
                   sh 'hostname'
                   sh 'which kubectl'
-                  sh 'kubectl config use-context arn:aws:eks:us-east-2:796848775042:cluster/flasksklearn-hon-capstone'
+                  sh 'kubectl config use-context arn:aws:eks:us-west-2:777933753083:cluster/flasksklearn-hon-capstone'
                   sh 'kubectl apply -f deployment/deployment.yml'
                   }
               }
