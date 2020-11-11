@@ -41,18 +41,6 @@ pipeline {
               }
          }
 
-         stage('Deploy Container') {
-              steps {
-                  withAWS(region:'us-west-2',credentials:'jenkinsUser') {
-                  sh 'aws eks update-kubeconfig --name flasksklearn-hon-capstone'
-                  sh 'hostname'
-                  sh 'which kubectl'
-                  sh 'kubectl config use-context arn:aws:eks:us-west-2:777933753083:cluster/flasksklearn-hon-capstone'
-                  sh 'kubectl apply -f deployment/deployment.yml'
-                  }
-              }
-         }
-
          stage('Upload to AWS Bucket') {
               steps {
                   withAWS(region:'us-west-2',credentials:'jenkinsUser') {
